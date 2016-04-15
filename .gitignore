@@ -20,8 +20,9 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+# Compiled assets
+build
+dist
 
 # Dependency directory
 node_modules
@@ -31,3 +32,7 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# Mac files
+.DS_Store
+Session.vim
