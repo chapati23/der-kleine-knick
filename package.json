@@ -19,7 +19,7 @@
     "clean": "rimraf ./dist && mkdir dist",
     "lint": "eslint src/**/*.js webpack.config.babel.js",
     "prebuild": "npm run clean && babel-node tools/build-html",
-    "build": "babel-node tools/build-webpack && npm run serve:dist",
+    "build": "babel-node tools/build-webpack",
     "deploy": "gh-pages-deploy"
   },
   "gh-pages-deploy": {
