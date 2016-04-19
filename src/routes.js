@@ -13,12 +13,12 @@ import Impressum from './components/Impressum'
 export default (
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Willkommen} />
-      <Route path="schultueten" component={Schultueten} />
-      <Route path="shop" component={Shop} />
-      <Route path="ueber-uns" component={UeberUns} />
-      <Route path="kontakt" component={Kontakt} />
-      <Route path="impressum" component={Impressum} />
+      <IndexRoute name="willkommen" component={Willkommen} />
+      <Route name="schultueten" path="schultueten" component={Schultueten} />
+      <Route name="shop" path="shop" component={Shop} />
+      <Route name="ueber-uns" path="ueber-uns" component={UeberUns} />
+      <Route name="kontakt" path="kontakt" component={Kontakt} />
+      <Route name="impressum" path="impressum" component={Impressum} />
     </Route>
   </Router>
 )

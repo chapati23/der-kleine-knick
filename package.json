@@ -15,7 +15,7 @@
   "scripts": {
     "start": "npm run serve:dev",
     "serve:dev": "babel-node tools/dev-server",
-    "serve:dist": "babel-node tools/dist-server",
+    "serve:dist": "NODE_ENV=production babel-node tools/dist-server",
     "preserve:dist": "npm run build",
     "clean": "rimraf ./dist && mkdir dist",
     "lint": "eslint src/**/*.js webpack.config.babel.js",

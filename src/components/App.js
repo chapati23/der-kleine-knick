@@ -9,14 +9,15 @@ import Footer from './layout/Footer'
 
 class App extends Component {
   static propTypes = {
-    children: PropTypes.element
+    children: PropTypes.element,
+    routes: PropTypes.array.isRequired
   }
 
   render() {
     return (
       <div id="react-root">
         <Nav />
-        <Header />
+        <Header routes={this.props.routes} />
         <main>{this.props.children}</main>
         <Footer />
       </div>

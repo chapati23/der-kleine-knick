@@ -3,8 +3,14 @@ import CSSModules from 'react-css-modules'
 import styles from './styles.css'
 
 class Header extends Component {
+  static propTypes = {
+    routes: PropTypes.array.isRequired
+  }
+
   render() {
-    const page = location.pathname === '/' ? 'willkommen' : location.pathname.split('/')[1]
+    const {routes} = this.props
+    // const page = location.pathname === '/' ? 'willkommen' : location.pathname.split('/')[1]
+    const page = routes[routes.length - 1].name
     const headerImg = require("../../../assets/img/" + page + "/header.png")
 
     return (
