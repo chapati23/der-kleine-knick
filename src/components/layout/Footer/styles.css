@@ -1,0 +1,55 @@
+:root {
+  --footer-color: #c5345c
+}
+
+.footer {
+  background: var(--footer-color);
+  height: 10rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &:before {
+    background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      var(--footer-color) 33.333%, var(--footer-color) 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      var(--footer-color) 33.333%, var(--footer-color) 66.667%,
+      transparent 66.667%
+    );
+    background-size: 4rem 8rem;
+    content: "";
+    display: block;
+    height: 2em;
+    position: absolute;
+    top: -2em;
+    width: 100%;
+  }
+}
+
+.impressum {
+  composes: text-link from '../Nav/styles.css';
+  color: white;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-60%);
+
+  &:hover, &:focus, &:visited {
+    color: white;
+  }
+}
+
+.social-icons {
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  a {
+    margin: 0 1rem;
+  }
+}

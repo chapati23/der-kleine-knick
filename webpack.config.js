@@ -1,8 +1,6 @@
 import webpack from 'webpack'
 import path from 'path'
-// import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import data from './data'
 
 function getEntry(env) {
   const entry = []
@@ -14,22 +12,16 @@ function getEntry(env) {
 }
 
 function getPlugins(env) {
-  const GLOBALS = {
-    'process.env.NODE_ENV': JSON.stringify(env),
-    __DEV__: env === 'development'
-  }
-
   const plugins = [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS) // Tells React to build in prod mode
+    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(env), __DEV__: env === 'development'}) // Tells React to build in prod mode
   ]
 
   switch (env) {
     case 'production':
-      plugins.push(new ExtractTextPlugin('index.css', { allChunks: true }))
+      plugins.push(new ExtractTextPlugin('styles.css', { allChunks: true }))
       plugins.push(new webpack.optimize.DedupePlugin())
       plugins.push(new webpack.optimize.UglifyJsPlugin())
-      // plugins.push(new StaticSiteGeneratorPlugin('bundle.js', data.routes, data))
       break
 
     case 'development':
@@ -57,7 +49,7 @@ function getLoaders(env) {
     // This provides separate caching and avoids a flash of unstyled content on load.
     loaders.push({
       test: /(\.css|\.scss)$/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+      loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
     })
   } else {
     loaders.push({
@@ -86,7 +78,12 @@ function getConfig(env) {
 
     module: { loaders: getLoaders(env) },
     plugins: getPlugins(env),
-    target: env === 'test' ? 'node' : 'web' // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
+    target: env === 'test' ? 'node' : 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
+    postcss: [
+      require('autoprefixer'),
+      require('postcss-calc'),
+      require('postcss-nested')
+    ]
   }
 }
 
