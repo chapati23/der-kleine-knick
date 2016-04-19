@@ -1,0 +1,30 @@
+:global html {
+  height: 100%;
+}
+
+:global body {
+  background: rgb(254, 254, 254);
+  height: 100%;
+}
+
+:global #app {
+  border: 1px solid rgba(149, 146, 145, 1);
+  border-width: 0 1px;
+  box-shadow: 0 0 10px grey;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 900px;
+}
+
+:global #react-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+:global main {
+  flex: 1;
+  margin-bottom: 4rem;
+  text-align: center;
+}

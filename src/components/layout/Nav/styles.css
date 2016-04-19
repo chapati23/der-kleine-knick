@@ -1,0 +1,35 @@
+.nav {
+  align-items: center;
+  height: 6rem;
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+}
+
+.logo {
+  height: 100%;
+  padding: .5rem 1rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.text-link {
+  color: rgba(211, 45, 136, 1);
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0 1.5rem;
+  position: relative;
+  text-decoration: none;
+  top: 1.6rem;
+
+  &:hover, &:focus, &:visited {
+    color: rgba(211, 45, 136, 1);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
