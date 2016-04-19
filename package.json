@@ -16,10 +16,11 @@
     "start": "npm run serve:dev",
     "serve:dev": "babel-node tools/dev-server",
     "serve:dist": "babel-node tools/dist-server",
+    "clean": "rimraf ./dist && mkdir dist",
+    "lint": "eslint src/**/*.js webpack.config.babel.js",
     "prebuild": "npm run clean && babel-node tools/build-html",
     "build": "babel-node tools/build-webpack && npm run serve:dist",
-    "clean": "rimraf ./dist && mkdir dist",
-    "lint": "eslint src/**/*.js webpack.config.babel.js"
+    "deploy": "gh-pages-deploy"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
