@@ -1,3 +1,71 @@
-.mood-header {
-  background: skyblue;
+.dino-intro {
+  align-items: center;
+  display: flex;
+
+  img {
+    width: 300px;
+  }
+
+  div {
+    flex: 1;
+    margin: 0 1rem;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+
+  p {
+    display: block;
+    margin: 1.5rem auto;
+    width: 25rem;
+  }
+}
+
+.logo {
+  margin: 1rem 0 4rem;
+}
+
+.startnext-vorteile {
+  margin-bottom: 5rem;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: left;
+    width: 42rem;
+
+    li {
+      align-items: center;
+      background: url('../../assets/img/willkommen/stern.png') no-repeat left center;
+      background-size: 4rem;
+      display: flex;
+      height: 5rem;
+      line-height: 1.2;
+      padding-left: 5rem;
+
+      &:first-of-type {
+        background: url('../../assets/img/willkommen/4-vorteile.png') no-repeat left center;
+        background-size: 3rem;
+        color: #78c6c7;
+        font-size: 2rem;
+        margin-bottom: .3rem;
+      }
+    }
+  }
+
+  .jubelgarantie {
+    position: absolute;
+    right: 5rem;
+    top: 35%;
+    width: 10rem;
+  }
+}
+
+.startnext-video {
+  margin-bottom: 10rem;
+  p {
+    margin-bottom: 3rem;
+  }
 }

@@ -4,6 +4,8 @@
 
 :global body {
   background: rgb(254, 254, 254);
+  font-family: Avenir Next, Avenir, Helvetica, sans-serif;
+  font-size: 1.4rem;
   height: 100%;
 }
 
@@ -11,7 +13,7 @@
   border: 1px solid rgba(149, 146, 145, 1);
   border-width: 0 1px;
   box-shadow: 0 0 10px grey;
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   max-width: 1200px;
   min-width: 900px;
@@ -27,4 +29,14 @@
   flex: 1;
   margin-bottom: 4rem;
   text-align: center;
+}
+
+:global strong {
+  color: #78c6c7;
+  font-weight: 400;
+}
+
+:global em {
+  color: #c7375c;
+  font-style: normal;
 }

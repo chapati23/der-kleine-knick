@@ -1,8 +1,8 @@
 .header {
   background: url(../../../assets/img/header-bg.png) no-repeat center center;
-  background-size: cover;
-  height: 22rem;
-  margin-bottom: 10rem;
+  background-size: 100% 100%;
+  height: 16rem;
+  margin-bottom: 5rem;
   text-align: center;
 
   img {
