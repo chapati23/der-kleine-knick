@@ -9,7 +9,6 @@ class Header extends Component {
 
   render() {
     const {routes} = this.props
-    // const page = location.pathname === '/' ? 'willkommen' : location.pathname.split('/')[1]
     const page = routes[routes.length - 1].name
     const headerImg = require("../../../assets/img/" + page + "/header.png")
 

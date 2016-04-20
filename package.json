@@ -20,7 +20,7 @@
     "clean": "rimraf ./dist && mkdir dist",
     "lint": "eslint src/**/*.js webpack.config.babel.js",
     "prebuild": "npm run clean && babel-node tools/build-html",
-    "build": "babel-node tools/build-webpack",
+    "build": "babel-node tools/build-webpack && echo derkleineknick.de > dist/CNAME",
     "deploy": "npm run build && ./tools/deploy.sh"
   },
   "dependencies": {
