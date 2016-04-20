@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import Routes from './routes'
 
 import App from './components/App'
@@ -11,7 +11,7 @@ import Kontakt from './components/Kontakt'
 import Impressum from './components/Impressum'
 
 export default (
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute name="willkommen" component={Willkommen} />
       <Route name="schultueten" path="schultueten" component={Schultueten} />
