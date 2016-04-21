@@ -13,11 +13,11 @@ class Nav extends Component {
         <Link styleName="logo" to="/">
           <img src={logoImg} />
         </Link>
-        <Link styleName="text-link" to="/">Willkommen</Link>
+        {/*<Link styleName="text-link" to="/">Willkommen</Link>
         <Link styleName="text-link" to="/schultueten">Schult&uuml;ten</Link>
         <Link styleName="text-link" to="/shop">Shop</Link>
         <Link styleName="text-link" to="/ueber-uns">Über Uns</Link>
-        <Link styleName="text-link" to="/kontakt">Kontakt</Link>
+        <Link styleName="text-link" to="/kontakt">Kontakt</Link>*/}
       </nav>
     )
   }

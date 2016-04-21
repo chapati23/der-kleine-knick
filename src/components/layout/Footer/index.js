@@ -8,8 +8,8 @@ class Footer extends Component {
   render() {
     return (
       <footer styleName="footer">
-        <Link styleName="impressum" to="impressum">Impressum</Link>
-        {/*<section styleName="social-icons">
+        {/*<Link styleName="impressum" to="impressum">Impressum</Link>
+        <section styleName="social-icons">
           <a href="">fb</a>
           <a href="">insta</a>
           <a href="">pntrst</a>
