@@ -6,8 +6,8 @@
   text-align: center;
 
   img {
-    height: 125%;
     position: relative;
     top: 2rem;
+    width: 55%;
   }
 }
