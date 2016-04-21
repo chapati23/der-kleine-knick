@@ -51,6 +51,10 @@ function getLoaders(env) {
       test: /(\.css|\.scss)$/,
       loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
     })
+    loaders.push({
+      test: /isIterable/,
+      loader: 'imports?Symbol=>false'
+    })
   } else {
     loaders.push({
       test: /(\.css|\.scss)$/,
