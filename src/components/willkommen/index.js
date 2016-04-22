@@ -43,15 +43,15 @@ class Willkommen extends Component {
             Hier geht's weiter zum Video unserer Crowdfunding-Kampagne bei<br />
             <a href="http://www.startnext.de/schultuete" target="_blank">www.startnext.de/schultuete</a>
           </p>
+
           <iframe
-            src="https://player.vimeo.com/video/34814788"
-            width="640"
-            height="360"
+            src="https://player.vimeo.com/video/163277974"
+            width="720"
+            height="405"
             frameBorder="0"
             webkitallowfullscreen
             mozallowfullscreen
-            allowFullscreen>
-          </iframe>
+            allowFullscreen></iframe>
         </section>
       </section>
     )
