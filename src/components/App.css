@@ -4,7 +4,7 @@
 }
 
 :global body {
-  background: rgba(200, 200, 200, .3);
+  /* background: rgba(200, 200, 200, .3); */
   font-family: Avenir Next, Avenir, Helvetica, sans-serif;
   font-size: 1.4rem;
   height: 100%;
