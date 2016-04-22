@@ -52,6 +52,10 @@
         color: #78c6c7;
         font-size: 2rem;
         margin-bottom: .3rem;
+
+        @media (max-width: 1000px) {
+          font-size: 1.8rem;
+        }
       }
     }
   }

@@ -25,7 +25,7 @@ class Willkommen extends Component {
           <img src={einhornImg} />
         </section>
 
-        <img styleName="logo" src={logoImg} width="200" />
+        <img styleName="logo" src={logoImg} width="150" />
 
         <section styleName="startnext-vorteile">
           <ul>
